@@ -1,0 +1,31 @@
+{
+  "name": "agentmesh-mcp",
+  "version": "0.2.0",
+  "description": "MCP server that lets Claude Code and Codex send messages to each other through a shared mailbox directory.",
+  "type": "module",
+  "bin": {
+    "agentmesh-mcp": "server.mjs",
+    "agentmesh-watch": "watch.mjs",
+    "agentmesh-tail": "tail.mjs",
+    "agentmesh-sessions": "sessions.mjs"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test/e2e.mjs && node test/watch.test.mjs",
+    "test:e2e": "node test/e2e.mjs",
+    "test:watch": "node test/watch.test.mjs",
+    "watch:codex": "node watch.mjs --role codex",
+    "watch:claude": "node watch.mjs --role claude",
+    "tail": "node tail.mjs",
+    "sessions:codex": "node sessions.mjs --role codex",
+    "sessions:claude": "node sessions.mjs --role claude"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  }
+}
