@@ -14,7 +14,8 @@ watch.mjs --role claude （收到訊息 → claude -p --resume …）──┘
 ## 安裝
 
 ```powershell
-cd "D:\Document\My Dev\A2AMCP"
+git clone https://github.com/jungkang0911/AgentMesh.git
+cd AgentMesh
 npm install
 pwsh ./setup.ps1        # 同時註冊到 Claude Code（user scope）與 Codex（~/.codex/config.toml）
 ```
